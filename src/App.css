@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 90%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(227, 217, 217);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.top-bar {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    padding: 5px;
+    margin: 10px;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header {
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.custom-checkbox {
+    transform: scale(1.5);
+    /* Increase the size of the checkbox */
+    margin-right: 10px;
+    /* Add spacing between the checkbox and label */
+}
+
+
+
+.delete-button {
+    color: rgb(237, 71, 71);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: small;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    text-decoration: underline;
+}
+
+.gallery-container {
+    border-top: 1px solid rgb(219, 213, 213);
+    padding: 15px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    
+}
+
+.overlay {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Add a smooth transition effect */
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.image-container:hover {
+    cursor: grab;
+}
+.image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+
+}
+.custom-checkbox-for-all {
+    cursor: pointer;
+    transform: scale(1.5);
+    margin-top: 30px;
+    margin-left: 30px;
+    pointer-events: auto;
+}
+
+
+.upload-image-container {
+    width: 200;
+    height: 200;
+    border: 1px dotted rgb(184, 184, 180);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-image {
+    height: 30px;
+    width: 30px;
+}
