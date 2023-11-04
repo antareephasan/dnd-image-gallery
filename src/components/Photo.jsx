@@ -17,21 +17,20 @@ export const Photo = forwardRef(
       ...style,
     };
 
-
-
-
     return (
       <>
         <div ref={ref} style={inlineStyles} {...props} className="image-container">
-          
+
           {/* Showing Selected checkbox on image without hovering */}
           {selectedImages.includes(id) &&
-            <input
-              type="checkbox"
-              checked={selectedImages.includes(id)}
-              onChange={() => handleCheckBoxChange(id)}
-              className='custom-checkbox-for-all'
-            />
+            <div className="overlay-selected">
+              <input
+                type="checkbox"
+                checked={selectedImages.includes(id)}
+                onChange={() => handleCheckBoxChange(id)}
+                className='custom-checkbox-for-all'
+              />
+            </div>
           }
           {/* The overlay class is used for creating overlay on image hover */}
           <div className="overlay">
